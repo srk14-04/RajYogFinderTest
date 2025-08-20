@@ -1,5 +1,5 @@
 export const InputBox = ({placeholder , onChange, label , min , max} : 
-    {placeholder : string ; onChange :(value : string) => any ; label:string ; min:number ; max:number
+    {placeholder : string ; onChange :(value : string) => void ; label:string ; min:number ; max:number
      }) =>{
         return (
             <div  >

@@ -15,7 +15,7 @@ export const InputComponent = ()=>{
         let total = 0;
         let  number = num;
         while(number > 0){
-            let  rem = number % 10;
+            const  rem = number % 10;
             total = total + rem;
             number = Math.floor(number / 10);// make it floor here
         };
@@ -24,7 +24,7 @@ export const InputComponent = ()=>{
         if(total > 9){
             let total2= 0;
             while(total>0){
-                let  rem2 = total % 10;
+                const  rem2 = total % 10;
                 total2 = total2  + rem2;
                 total = Math.floor(total / 10); // make it floor here
     
@@ -42,7 +42,7 @@ export const InputComponent = ()=>{
     }
 
     function yearMale(yearSum : number){
-        let result =  11- yearSum;
+        const result =  11- yearSum;
         if(result == 10){
             return 1;
         }else{
@@ -52,13 +52,13 @@ export const InputComponent = ()=>{
     }
 
     function monthSummer(monthSum : number , dateSum : number , yearSum : number ){
-        let result = monthSum + dateSum + yearSum;
-        let month2 = sum(result);
+        const result = monthSum + dateSum + yearSum;
+        const month2 = sum(result);
         return month2;
     }
 
     function matrixCalc( num1 : number, num2:number , num3:number , dateSum :number, monthSum2 :number, yearSum2 : number ){
-        let arr = [
+        const arr = [
             [0 , 0 , 0],
             [0 , 0 , 0],
             [0 , 0 , 0]
@@ -67,7 +67,7 @@ export const InputComponent = ()=>{
     
          let result = "" + num1 + num2 + num3 + dateSum + monthSum2 + yearSum2;
     
-        for(let char of result){
+        for(const char of result){
            if(char == "4"){
             arr[0][0] = 1;
            }else if(char == '9'){
@@ -123,9 +123,9 @@ export const InputComponent = ()=>{
        
         
         
-        let dateSum :number = sum(date);
-        let monthSum  : number= sum(month);
-        let yearSum : number = sum(year);
+        const dateSum :number = sum(date);
+        const monthSum  : number= sum(month);
+        const yearSum : number = sum(year);
     
         
         // function yearFemale(yearSum : number){
@@ -143,17 +143,17 @@ export const InputComponent = ()=>{
         
         // }
         
-        let monthSum2 = monthSummer(monthSum , dateSum , yearSum);
+        const monthSum2 = monthSummer(monthSum , dateSum , yearSum);
         
         // let yearSum2 = 0;
         
-        let yearSum2 : number = yearMale(yearSum);
+        const yearSum2 : number = yearMale(yearSum);
         
             
                 //yearSum2 = yearFemale(yearSum);
         
         
-        let percentage = matrixCalc(date , month , year , dateSum , monthSum2 , yearSum2);
+        const percentage = matrixCalc(date , month , year , dateSum , monthSum2 , yearSum2);
         return percentage;
     }
     
@@ -171,7 +171,7 @@ export const InputComponent = ()=>{
                     <button className=" border-1 p-4 w-80 bg-gradient-to-tr from-amber-500 to-amber-200
                      text-gray-950 rounded-md cursor-pointer hover:opacity-90 active:scale-95 transition transform duration-150"
                     onClick={()=>{
-                        let result = RajYogCalc(Number(date) , Number(month) ,Number(year))
+                        const result = RajYogCalc(Number(date) , Number(month) ,Number(year))
                         setPercentage(result);
                         console.log(result);
                     }}
