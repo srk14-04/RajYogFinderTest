@@ -65,7 +65,7 @@ export const InputComponent = ()=>{
         ]
     
     
-         let result = "" + num1 + num2 + num3 + dateSum + monthSum2 + yearSum2;
+        const result = "" + num1 + num2 + num3 + dateSum + monthSum2 + yearSum2;
     
         for(const char of result){
            if(char == "4"){
