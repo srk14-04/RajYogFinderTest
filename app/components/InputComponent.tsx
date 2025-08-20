@@ -179,7 +179,7 @@ export const InputComponent = ()=>{
                 
        </div>
         <div className="flex justify-center pt-10 text-4xl ">
-            The Percentage of you being Successful is  <span className="pl-3 "> {Math.floor(percentage)}%</span> , But always keep hustling
+            The Percentage of you being Successful is {Math.floor(percentage)}%     , But always keep hustling
             
         </div>
 
